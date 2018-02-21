@@ -526,6 +526,9 @@ Optimizer::PassToken CreateSimplificationPass();
 // won't be unrolled. See CanPerformUnroll LoopUtils.h for more information.
 Optimizer::PassToken CreateLoopUnrollPass(bool fully_unroll, int factor = 0);
 
+// Creates a pass that removes unused input/output entrypoint variables.
+Optimizer::PassToken CreateInterfaceCleanupPass();
+
 }  // namespace spvtools
 
 #endif  // SPIRV_TOOLS_OPTIMIZER_HPP_

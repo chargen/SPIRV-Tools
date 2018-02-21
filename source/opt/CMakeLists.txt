@@ -47,6 +47,7 @@ add_library(SPIRV-Tools-opt
   insert_extract_elim.h
   instruction.h
   instruction_list.h
+  interface_cleanup_pass.h
   ir_builder.h
   ir_context.h
   ir_loader.h
@@ -122,6 +123,7 @@ add_library(SPIRV-Tools-opt
   insert_extract_elim.cpp
   instruction.cpp
   instruction_list.cpp
+  interface_cleanup_pass.cpp
   ir_context.cpp
   ir_loader.cpp
   licm_pass.cpp

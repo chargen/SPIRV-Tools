@@ -417,4 +417,10 @@ Optimizer::PassToken CreateLoopUnrollPass(bool fully_unroll, int factor) {
   return MakeUnique<Optimizer::PassToken::Impl>(
       MakeUnique<opt::LoopUnroller>(fully_unroll, factor));
 }
+
+Optimizer::PassToken CreateInterfaceCleanupPass() {
+  return MakeUnique<Optimizer::PassToken::Impl>(
+      MakeUnique<opt::InterfaceCleanupPass>());
+}
+
 }  // namespace spvtools

@@ -35,6 +35,7 @@
 #include "inline_exhaustive_pass.h"
 #include "inline_opaque_pass.h"
 #include "insert_extract_elim.h"
+#include "interface_cleanup_pass.h"
 #include "licm_pass.h"
 #include "local_access_chain_convert_pass.h"
 #include "local_redundancy_elimination.h"
