@@ -296,3 +296,8 @@ add_spvtools_unittest(TARGET simplification
   SRCS simplification_test.cpp pass_utils.cpp
   LIBS SPIRV-Tools-opt
 )
+
+add_spvtools_unittest(TARGET pass_interface_cleanup
+  SRCS interface_cleanup_test.cpp pass_utils.cpp
+  LIBS SPIRV-Tools-opt
+)
