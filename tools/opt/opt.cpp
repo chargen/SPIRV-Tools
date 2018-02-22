@@ -509,6 +509,9 @@ OptStatus ParseFlags(int argc, const char** argv, Optimizer* optimizer,
         if (status.action != OPT_CONTINUE) {
           return status;
         }
+        optimizer->RegisterPass(CreateLoopFullyUnrollPass());
+      } else if (0 == strcmp(cur_arg, "--interface-cleanup")) {
+        optimizer->RegisterPass(CreateInterfaceCleanupPass());
       } else if (0 == strcmp(cur_arg, "--skip-validation")) {
         *skip_validator = true;
       } else if (0 == strcmp(cur_arg, "-O")) {
